@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+
+/* Fundos */
+--color-background: #F4F5F7;
+--color-background-main: #FFFFFF;
+--color-surface-card: #FFFFFF;
+--color-surface-container: #EAECEF;
+--color-surface-container-low: #F0F1F3;
+--color-surface-container-lowest: #F8F9FA;
+
+/* Primária (laranja mais sóbrio) */
+--color-primary: #C2410C;
+--color-primary-container: #EA580C;
+--color-primary-hover: #9A3412;
+--color-on-primary-container: #FFFFFF;
+--color-inverse-primary: #FED7AA;
+
+/* Texto */
+--color-on-surface: #111827;
+--color-on-surface-variant: #4B5563;
+
+/* Bordas */
+--color-border-subtle: #D1D5DB;
+
+/* Status */
+--color-status-success: #16A34A;
+--color-status-danger: #DC2626;
+
+/* Border radius */
+--radius-DEFAULT: 0.125rem;
+--radius-lg: 0.25rem;
+--radius-xl: 0.5rem;
+--radius-full: 0.75rem;
+
+/* Spacing */
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 40px;
+--spacing-gutter: 20px;
+--spacing-container-max: 1280px;
+  
+}
+
+
+
+body{
+  background-color: #FFFFFF;
+  color: #111827;
+}
+
+button{
+  cursor: pointer;
+}

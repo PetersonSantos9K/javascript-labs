@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme inline {
+
+  --color-bg:            #080C0A;
+  --color-bg-raised:     #0D1210;
+  --color-bg-surface:    #111815;
+  --color-bg-card:       #0F1410;
+  --color-bg-input:      #0D120E;
+
+  --color-text:          #E8E4DC;
+  --color-text-sub:      #6E6A62;
+  --color-text-muted:    #3A3830;
+  --color-text-logo:     rgba(232,228,220,0.35);
+  
+
+  --color-accent:        #D4A853;
+  --color-accent-hover: #B88F3F;
+  --color-accent-dim:    rgba(212,168,83,0.07);
+  --color-accent-glow:   rgba(212,168,83,0.15);
+
+  --color-green:         #7A9E87;
+  --color-green-dim:     rgba(122,158,135,0.08);
+  --color-green-border:  rgba(122,158,135,0.28);
+
+  --color-blue:          #7A90AD;
+  --color-blue-dim:      rgba(122,144,173,0.08);
+  --color-blue-border:   rgba(122,144,173,0.28);
+
+  --color-rose:          #C97B6A;
+  --color-rose-dim:      rgba(201,123,106,0.07);
+  --color-rose-border:   rgba(201,123,106,0.30);
+
+  --color-border:        rgba(255,255,255,0.055);
+  --color-border-md:     rgba(255,255,255,0.09);
+  --color-border-accent: rgba(212,168,83,0.28);
+  
+  --font-serif: var(--font-cormorant-garamond);
+  --font-mono: var(--font-geist-mono);
+  --font-cormorant: (var(--font-cormorant));
+}
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+*/
+
+body{
+  color: white;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.hero-grid{
+  content: '';
+  background-image: repeating-linear-gradient( 
+    90deg, 
+    transparent, 
+    transparent 119px, 
+    rgba(255,255,255,0.015) 119px, 
+    rgba(255,255,255,0.015) 120px);
+}
+
+
+.hero-glow{
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clap(400%, 50vw, 800px);
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(212,168,83,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-glow-bottom{
+    bottom: -100px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 800px; 
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(212,168,83,0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero > div > .hero-eyebrow{
+  animation: fadeUp 0.6s ease 0.1s both;
+} 
+.hero-eyebrow::before, .hero-eyebrow::after{
+  content: '';
+  width: 20px; 
+  height: 1px;
+  background: var(--color-accent); 
+  opacity: 0.5;
+}
+
+.hero-eyebrow::before, .hero > div > h1{
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+
+.hero-eyebrow::before, .hero-sub{
+  animation: fadeUp 0.7s ease 0.35s both;
+}
+
+
+.primary::after{
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    transform: translateX(-100%); transition: transform 0.5s;
+}
+
+.primary:hover::after{
+  transform: translateX(100%);
+}
+
+
+
+
+@keyframes fadeUp {
+  from  { opacity: 0; transform: translateY(16px); }
+  to    { opacity: 1; transform: translateY(0);}
+}
